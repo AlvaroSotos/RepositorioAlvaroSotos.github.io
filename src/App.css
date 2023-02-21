@@ -3,6 +3,7 @@
  padding: 0;
   margin: 0;
 text-align: center;
+box-sizing: border-box;
 }
 div#root {
   min-height: 100vh;
@@ -12,10 +13,10 @@ div#root {
 
 main.light{
 background-color: white;
-color: black;
+color: rgb(0, 0, 0);
 }
 main.dark{
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(63, 63, 63);
   color: white;
 }
 main.dark a{
@@ -24,6 +25,9 @@ main.dark a{
 main.dark a:hover{
   text-decoration: underline;
   color: white;
+}
+main.dark h1{
+  color:black;
 }
 h1{
   font-family: "Press Start 2P";
@@ -35,17 +39,31 @@ h2, h3{
 .about p{
   margin: 1rem;
 }
-section{
+section.home,
+section.about,
+section.portfolio,
+section.contact{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+section.about,
+section.portfolio,
+section.contact{
+  margin-top: 1rem;
 }
 
-header nav ul{
+
+header nav {
   background: rgba(255, 253, 253, 0.685);
   color: black;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav ul{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -59,9 +77,9 @@ header button{
 li{
   list-style: none;
 }
-.avatar{
+img.avatar {
   border-radius: 100%;
-  width: 150px;
+  width: 200px;
   filter: grayscale(100%)
 }
 .skillsContainer{
@@ -102,7 +120,7 @@ main a img{
 }
 section.home{
   background-color: rgba(255, 189, 66, 0.945);
-  padding: 5rem;
+  padding: 1rem;
 }
 
 div.modal img{
@@ -150,33 +168,35 @@ div.pang a{
   text-decoration: underline;
 }
 
-@media (min-width: 600px) {
-  header nav ul{
-      display: flex;
-      flex-direction: row;
-      height: 5rem;
-  }
-  h1{
+@media screen and (min-width: 700px) {
+header nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  height: 5rem;
+}
+h1{
     font-size: 2rem;
   }
 section.home{
   height: 30vh;
 }
 
-.avatar{
-  width: 250px;
+img.avatar{
+  width:18rem;
 }
-.about {
+section.about {
   display: grid;
   grid-template-columns: 20rem 30rem;
   grid-template-rows: auto;
   align-items: center;
   margin: 5rem;
 }
-.about p{
+section.about p{
   margin: 2rem;
 }
-.about ul{
+section.about ul{
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -225,7 +245,7 @@ div.modal img{
   gap: 1rem;
 
  }
- .contact{
+ section.contact{
   margin: 2rem;
   margin-bottom: 0rem;
   display: grid;

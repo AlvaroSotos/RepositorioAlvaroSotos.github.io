@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import  ThemeSwitcher   from "./ThemeSwitcher";
-
+import "./../App.css"
 const Header = () => {
   return (
     <header>
