@@ -168,7 +168,7 @@ div.pang a{
   text-decoration: underline;
 }
 
-@media screen and (min-width: 700px) {
+@media (min-width: 700px) {
 header nav ul{
   display: flex;
   flex-direction: row;
