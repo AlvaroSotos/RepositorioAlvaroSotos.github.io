@@ -87,6 +87,7 @@ const Page = () => {
             </section>
             <section className="portfolio">
             <h2>Portfolio<hr></hr></h2>
+            <br></br>
             <div className='contenedorModal'>
             <div className="modal">
             <img src={game} alt="game" onClick={openModalGame}></img>

@@ -36,7 +36,7 @@ h1{
 h2, h3{
   color: rgb(170, 116, 15);
 }
-.about p{
+section.about p{
   margin: 1rem;
 }
 section.home,
@@ -82,12 +82,12 @@ img.avatar {
   width: 200px;
   filter: grayscale(100%)
 }
-.skillsContainer{
+div.skillsContainer{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.skillsContainer img{
+div.skillsContainer img{
   width: 50px;
   filter: grayscale(100%)
 }
@@ -204,7 +204,7 @@ section.about ul{
 }
 
 
-.skillsContainer img{
+div.skillsContainer img{
   width: 70px;
 }
 
