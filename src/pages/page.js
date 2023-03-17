@@ -216,7 +216,7 @@ const Page = () => {
             <section className="contact">
            <img src={mail} alt= "gif email"></img>
            <div>
-            <h2>Contact me <hr></hr></h2>
+            <h2>Contact me pls <hr></hr></h2>
             <li>
             <a href="mailto:alvarosotos28@gmail.com">📫alvarosotos28@gmail.com</a>
             </li>
