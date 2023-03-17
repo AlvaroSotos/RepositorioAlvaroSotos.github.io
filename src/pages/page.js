@@ -12,6 +12,7 @@ import logoC from "../Imagenes/CSharp_Logo_600x600.png"
 import logoUnity from "../Imagenes/Unity_Technologies_logo.png"
 import mail from "../Imagenes/Mailbox-amico.svg"
 import Modal from 'react-modal';
+import YouTube from 'react-youtube';
 
 import "../App.css"
 const Page = () => {
@@ -31,6 +32,8 @@ const Page = () => {
       const [modalIsOpenPalos, setModalIsOpenPalos] = React.useState(false);
       const [modalIsOpenRaya, setModalIsOpenRaya] = React.useState(false);
       const [modalIsOpenPang, setModalIsOpenPang] = React.useState(false);
+      const [modalIsOpenCorto, setModalIsOpenCorto] = React.useState(false);
+      const videoId = "gsbUS7zGTtA";
 
     function openModalGame() {
         setModalIsOpenGame(true);
@@ -48,6 +51,9 @@ const Page = () => {
       function openModalPang(){
         setModalIsOpenPang(true)
       }
+      function openModalCorto(){
+        setModalIsOpenCorto(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -55,6 +61,7 @@ const Page = () => {
         setModalIsOpenPalos(false);
         setModalIsOpenPang(false);
         setModalIsOpenRaya(false);
+        setModalIsOpenCorto(false);
       }
     
     
@@ -89,6 +96,8 @@ const Page = () => {
             <h2>Portfolio<hr></hr></h2>
             <br></br>
             <div className='contenedorModal'>
+
+{/*copiar*/}
             <div className="modal">
             <img src={game} alt="game" onClick={openModalGame}></img>
                 <Modal
@@ -106,6 +115,8 @@ const Page = () => {
                 </div>
                 </Modal>
                 </div>
+{/*copiar*/}
+
                 <div className="modal">
                 <img src={buscaminas} alt="buscaminas" onClick={openModalBuscaminas}></img>
                 <Modal
@@ -176,7 +187,28 @@ const Page = () => {
                     <p>Date: December 2021</p>
                     <p className="service">Service: c# console</p>
                     </div>
+                </Modal>       
+            </div>
+
+            <div className="modal">
+                <img title = "Cortoanimacion" src={enRaya} alt="cortoanimacion" onClick={openModalCorto}></img>
+                <Modal
+                    isOpen={modalIsOpenCorto}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="cortoanimacion"
+                >
+                    <div className="cortoanimacion">
+                    <YouTube title = "Cortoanimacion" className="cortoanimacion" videoId={videoId} alt="Corto de animacion" controls ></YouTube>
+                    <h3>Corto Animación en Blender</h3>
+                    <p>This is a tic-tac-toe game that I made in c# console, it has a menu that is accesible at any time. You can play with a friend and it has 0 bugs</p>
+                    <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link Corto Animación </a>
+                    <p>Date: march 2023</p>
+                    <p className="service">Service: c# console</p>
+                    </div>
                 </Modal>
+
+                
                 
             </div>
             </div>

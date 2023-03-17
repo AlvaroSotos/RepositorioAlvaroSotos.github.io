@@ -141,21 +141,24 @@ img.monsters,
 img.buscaminas,
 img.enraya,
 img.palos,
-img.pang{
+img.pang,
+video.cortoanimacion{
     width: 250px;
   }
 div.monsters h3,
 div.buscaminas h3,
 div.enraya h3,
 div.palos h3,
-div.pang h3{
+div.pang h3,
+div.cortoanimacion h3{
   margin: 1rem;
 }
 div.monsters p,
 div.buscaminas p,
 div.enraya p,
 div.palos p,
-div.pang p{
+div.pang p,
+div.cortoanimacion p{
   margin: 1rem;
   text-align: justify;
 }
@@ -163,12 +166,13 @@ div.monsters a,
 div.buscaminas a,
 div.enraya a,
 div.palos a,
-div.pang a{
+div.pang a,
+div.cortoanimacion a{
   margin: 1rem;
   text-decoration: underline;
 }
 
-@media (min-width: 700px) {
+@media screen and (min-width: 700px) {
 header nav ul{
   display: flex;
   flex-direction: row;
@@ -216,9 +220,9 @@ align-items: center;
 section.portfolio h2{
   margin: 2rem;
   }
-div.modal img{
-  height: 200px;
-  width: 400px;
+div.modal img, div.modal video{
+  height: 20rem;
+  width: 40rem;
   object-fit: cover;
  }
  
@@ -226,8 +230,9 @@ div.modal img{
  img.buscaminas,
  img.enraya,
  img.palos,
- img.pang{
-     width: 400px;
+ img.pang,
+ video.cortoanimacion{
+     width: 40rem;
    }
  
  div.contenedorModal{
