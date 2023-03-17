@@ -187,7 +187,7 @@ const Page = () => {
                     <p>Date: December 2021</p>
                     <p className="service">Service: c# console</p>
                     </div>
-                </Modal>       
+                </Modal>      
             </div>
 
             <div className="modal">
@@ -200,11 +200,11 @@ const Page = () => {
                 >
                     <div className="cortoanimacion">
                     <YouTube title = "Cortoanimacion" className="cortoanimacion" videoId={videoId} alt="Corto de animacion" controls ></YouTube>
-                    <h3>Corto Animación en Blender</h3>
-                    <p>This is a tic-tac-toe game that I made in c# console, it has a menu that is accesible at any time. You can play with a friend and it has 0 bugs</p>
+                    <h3>Blender animation short</h3>
+                    <p>This is a blender animation short made in Blender with 2 partners, we made all the scenes models, including props, we wanted to give it a cartoon style so we made a toon shader with a fresnel and glossy effects </p>
                     <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link Corto Animación </a>
                     <p>Date: march 2023</p>
-                    <p className="service">Service: c# console</p>
+                    <p className="service">Service: Blender</p>
                     </div>
                 </Modal>
 
