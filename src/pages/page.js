@@ -13,6 +13,8 @@ import logoUnity from "../Imagenes/Unity_Technologies_logo.png"
 import mail from "../Imagenes/Mailbox-amico.svg"
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
+import Corto from "../Imagenes/WEB.png"
+
 
 import "../App.css"
 const Page = () => {
@@ -191,7 +193,7 @@ const Page = () => {
             </div>
 
             <div className="modal">
-                <img title = "Cortoanimacion" src={enRaya} alt="cortoanimacion" onClick={openModalCorto}></img>
+                <img title = "Cortoanimacion" src={Corto} alt="cortoanimacion" onClick={openModalCorto}></img>
                 <Modal
                     isOpen={modalIsOpenCorto}
                     onRequestClose={closeModal}
@@ -202,7 +204,7 @@ const Page = () => {
                     <YouTube title = "Cortoanimacion" className="cortoanimacion" videoId={videoId} alt="Corto de animacion" controls ></YouTube>
                     <h3>Blender animation short</h3>
                     <p>This is a blender animation short made in Blender with 2 partners, we made all the scenes models, including props, we wanted to give it a cartoon style so we made a toon shader with a fresnel and glossy effects </p>
-                    <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link Corto Animación </a>
+                    <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link. Animation short </a>
                     <p>Date: march 2023</p>
                     <p className="service">Service: Blender</p>
                     </div>
@@ -216,7 +218,7 @@ const Page = () => {
             <section className="contact">
            <img src={mail} alt= "gif email"></img>
            <div>
-            <h2>Contact me pls <hr></hr></h2>
+            <h2>Contact me<hr></hr></h2>
             <li>
             <a href="mailto:alvarosotos28@gmail.com">📫alvarosotos28@gmail.com</a>
             </li>
