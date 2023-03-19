@@ -13,9 +13,10 @@ import logoUnity from "../Imagenes/Unity_Technologies_logo.png"
 import mail from "../Imagenes/Mailbox-amico.svg"
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
+import YouTube2 from 'react-youtube';
 import Corto from "../Imagenes/WEB.png"
 import PortadaMonsters from "../Imagenes/MonstersOdyssey.png"
-
+import pokeball from "../Imagenes/HighRender_Pokeballs.png"
 
 import "../App.css"
 const Page = () => {
@@ -36,7 +37,9 @@ const Page = () => {
       const [modalIsOpenRaya, setModalIsOpenRaya] = React.useState(false);
       const [modalIsOpenPang, setModalIsOpenPang] = React.useState(false);
       const [modalIsOpenCorto, setModalIsOpenCorto] = React.useState(false);
+      const [modalIsOpenBulbasaur, setModalIsOpenBulbasaur] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
+      const bulbasaurVideoId = "4ky0rCV_ZOs";
 
     function openModalGame() {
         setModalIsOpenGame(true);
@@ -57,6 +60,9 @@ const Page = () => {
       function openModalCorto(){
         setModalIsOpenCorto(true)
       }
+      function openModalBulbasaur(){
+        setModalIsOpenBulbasaur(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -65,6 +71,7 @@ const Page = () => {
         setModalIsOpenPang(false);
         setModalIsOpenRaya(false);
         setModalIsOpenCorto(false);
+        setModalIsOpenBulbasaur(false);
       }
     
     
@@ -101,6 +108,49 @@ const Page = () => {
             <div className='contenedorModal'>
 
 {/*copiar*/}
+<div className="modal">
+                <img title = "Cortoanimacion" src={Corto} alt="cortoanimacion" onClick={openModalCorto}></img>
+                <Modal
+                    isOpen={modalIsOpenCorto}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="cortoanimacion"
+                >
+                    <div className="cortoanimacion">
+                    <YouTube title = "Cortoanimacion" className="cortoanimacion" videoId={videoId} alt="Corto de animacion" controls ></YouTube>
+                    <h3>Blender animation short</h3>
+                    <p>This is a blender animation short made in Blender with 2 partners, we made all the scenes models, including props, we wanted to give it a cartoon style so we made a toon shader with a fresnel and glossy effects </p>
+                    <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link.</a>
+                    <p>Date: march 2023</p>
+                    <p className="service">Service: Blender</p>
+                    </div>
+                </Modal>
+
+                
+                
+            </div>
+            <div className="modal">
+                <img title = "BulbasaurCard" src={pokeball} alt="BulbasaurCard" onClick={openModalBulbasaur}></img>
+                <Modal
+                    isOpen={modalIsOpenBulbasaur}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="BulbasaurCard"
+                >
+                    <div className="BulbasaurCard">
+                    <YouTube2 title = "Bulbasaurcard" className="BulbasaurCard" videoId={bulbasaurVideoId} alt="3D Bulbasaur Card Video" controls ></YouTube2>
+                    <h3>Blender 3D bulbasaur card</h3>
+                    <p>I modeled this 3D card in Blender and rendered it using the compositing tab in Blender to finally get this result.
+                       I wanted to give bulbasaur a cartoon style so I used a toon shader made with nodes and added an outline material too.</p>
+                    <a href="https://youtu.be/4ky0rCV_ZOs">YouTube link.</a>
+                    <p>Date: january 2023</p>
+                    <p className="service">Service: Blender</p>
+                    </div>
+                </Modal>
+
+                
+                
+            </div>
             <div className="modal">
             <img src={PortadaMonsters} alt="game" onClick={openModalGame}></img>
                 <Modal
@@ -193,27 +243,7 @@ const Page = () => {
                 </Modal>      
             </div>
 
-            <div className="modal">
-                <img title = "Cortoanimacion" src={Corto} alt="cortoanimacion" onClick={openModalCorto}></img>
-                <Modal
-                    isOpen={modalIsOpenCorto}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="cortoanimacion"
-                >
-                    <div className="cortoanimacion">
-                    <YouTube title = "Cortoanimacion" className="cortoanimacion" videoId={videoId} alt="Corto de animacion" controls ></YouTube>
-                    <h3>Blender animation short</h3>
-                    <p>This is a blender animation short made in Blender with 2 partners, we made all the scenes models, including props, we wanted to give it a cartoon style so we made a toon shader with a fresnel and glossy effects </p>
-                    <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link. Animation short </a>
-                    <p>Date: march 2023</p>
-                    <p className="service">Service: Blender</p>
-                    </div>
-                </Modal>
 
-                
-                
-            </div>
             </div>
             </section>
             <section className="contact">
