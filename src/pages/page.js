@@ -2,7 +2,7 @@ import React from 'react';
 import { useThemeContext } from "../context/ThemeContext";
 import logoGit from "../Imagenes/logogit.png"
 import logoBitBucket from "../Imagenes/LogoBitbucket.png"
-import game from "../Imagenes/game.png";
+import game from "../Imagenes/InMonsters.png";
 import enRaya from "../Imagenes/3EnRaya.png";
 import palos from "../Imagenes/21Palos.png";
 import buscaminas from "../Imagenes/Buscaminas_4.png"
@@ -14,6 +14,7 @@ import mail from "../Imagenes/Mailbox-amico.svg"
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
 import Corto from "../Imagenes/WEB.png"
+import PortadaMonsters from "../Imagenes/MonstersOdyssey.png"
 
 
 import "../App.css"
@@ -101,7 +102,7 @@ const Page = () => {
 
 {/*copiar*/}
             <div className="modal">
-            <img src={game} alt="game" onClick={openModalGame}></img>
+            <img src={PortadaMonsters} alt="game" onClick={openModalGame}></img>
                 <Modal
                     isOpen={modalIsOpenGame}
                     onRequestClose={closeModal}
