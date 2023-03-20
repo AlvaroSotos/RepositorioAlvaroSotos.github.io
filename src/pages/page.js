@@ -162,7 +162,7 @@ const Page = () => {
                 <div className="monsters" onClick={closeModal}>
                     <img className="monsters" src={game} alt="game"></img>
                     <h3>MONSTERS ODYSSEY</h3>
-                    <p>We developed as a team a 3D action RPG named Monsters Odyssey where I was the lead programmer and I've been expanding my knowledge by
+                    <p>We developed as a team in my HND a 3D action RPG named Monsters Odyssey where I was the lead programmer and I've been expanding my knowledge by
                       implementing algorithms like flocking, creating diferent type of shaders, like a ToonShader, an outline, displacement shader to make sea
                       waves or fishes swim moves and also I used them to make better VFX.
                       I implemented for first time the Unity new Input System, a third person camera (using a virtual camera) that can be locked into enemies, a recursive pool of objects...
