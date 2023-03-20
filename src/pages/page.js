@@ -162,7 +162,11 @@ const Page = () => {
                 <div className="monsters" onClick={closeModal}>
                     <img className="monsters" src={game} alt="game"></img>
                     <h3>MONSTERS ODYSSEY</h3>
-                    <p>Right now in my HND I'm developing as a team a 3D action RPG named Monsters Odyssey where I'm the lead programmer and I've been improving my code implementing the Unity new Input System, a third person camera (using a virtual camera) that can be locked into enemies,I made an infinite pool of objects and also a flock algorithym that controls the behavior of the fishes you'll see at an underwater level, the enemies in this level will also behave in a similar way but having also an attack behavior. Also I'm learning unity shaders and OpenGL and I aim to apply it to the game.</p>
+                    <p>We developed as a team a 3D action RPG named Monsters Odyssey where I was the lead programmer and I've been expanding my knowledge by
+                      implementing algorithms like flocking, creating diferent type of shaders, like a ToonShader, an outline, displacement shader to make sea
+                      waves or fishes swim moves and also I used them to make better VFX.
+                      I implemented for first time the Unity new Input System, a third person camera (using a virtual camera) that can be locked into enemies, a recursive pool of objects...
+                      Monsters Odyssey has 5 levels, each made by one of the team, I made an underwater adventure where you figth against some enemies made by me but also harvest some key plants to beat the final boss!</p>
                     <p>Date: January 2022</p>
                     <p className="service">Service: c# Windows forms</p>
                 </div>
