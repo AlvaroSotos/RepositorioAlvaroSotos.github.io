@@ -129,7 +129,8 @@ const Page = () => {
                     <p>This is a my HND final project, I wanted to learn more about graphic programming so I started by creating a 3D space using OpenTK ( an OpenGL wrapper).This is a video showing how I move around the objects in movement that I made.
                        I look forward to keep improving it and learning more and more. </p>
                     <a href="https://youtu.be/aiH3Y2bVk7g">YouTube link</a>
-                    <p href="https://bitbucket.org/alvarosotos/opentk-graphic-interface/src/master/">Repository link</p>
+                    <p></p>
+                    <a href="https://bitbucket.org/alvarosotos/opentk-graphic-interface/src/master/">Repository link</a>
                     <p>Date: june 2023</p>
                     <p className="service">Service: OpenTK</p>
                     </div>
