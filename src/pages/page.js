@@ -17,6 +17,7 @@ import YouTube2 from 'react-youtube';
 import Corto from "../Imagenes/WEB.png"
 import PortadaMonsters from "../Imagenes/MonstersOdyssey.png"
 import pokeball from "../Imagenes/HighRender_Pokeballs.png"
+import GraphicInterface from "../Imagenes/GraphicInterface.png"
 
 import "../App.css"
 const Page = () => {
@@ -38,8 +39,10 @@ const Page = () => {
       const [modalIsOpenPang, setModalIsOpenPang] = React.useState(false);
       const [modalIsOpenCorto, setModalIsOpenCorto] = React.useState(false);
       const [modalIsOpenBulbasaur, setModalIsOpenBulbasaur] = React.useState(false);
+      const [modalIsOpenGraphicInterface, setModalIsOpenGraphicInterface] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
       const bulbasaurVideoId = "4ky0rCV_ZOs";
+      const GraphicInterfaceVideoId = "aiH3Y2bVk7g";    
 
     function openModalGame() {
         setModalIsOpenGame(true);
@@ -63,6 +66,9 @@ const Page = () => {
       function openModalBulbasaur(){
         setModalIsOpenBulbasaur(true)
       }
+      function openModalGraphicInterface(){
+        setModalIsOpenGraphicInterface(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -72,6 +78,7 @@ const Page = () => {
         setModalIsOpenRaya(false);
         setModalIsOpenCorto(false);
         setModalIsOpenBulbasaur(false);
+        setModalIsOpenGraphicInterface(false);
       }
     
     
@@ -108,6 +115,28 @@ const Page = () => {
             <div className='contenedorModal'>
 
 {/*copiar*/}
+<div className="modal">
+                <img title = "GraphicInterface" src={GraphicInterface} alt="graphicinterface" onClick={openModalGraphicInterface}></img>
+                <Modal
+                    isOpen={modalIsOpenGraphicInterface}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="graphicinterface"
+                >
+                    <div className="graphicinterface">
+                    <YouTube title = "GraphicInterface" className="graphicinterface" videoId={GraphicInterfaceVideoId} alt="Graphic Interface" controls ></YouTube>
+                    <h3>OpenTK Graphic Interface</h3>
+                    <p>This is a my HND final project, I wanted to learn more about graphic programming so I started by creating a 3D space using OpenTK ( an OpenGL wrapper).This is a video showing how I move around the objects in movement that I made.
+                       I look forward to keep improving it and learning more and more. </p>
+                    <a href="https://youtu.be/aiH3Y2bVk7g">YouTube link.</a>
+                    <p>Date: june 2023</p>
+                    <p className="service">Service: OpenTK</p>
+                    </div>
+                </Modal>
+
+                
+                
+            </div>
 <div className="modal">
                 <img title = "Cortoanimacion" src={Corto} alt="cortoanimacion" onClick={openModalCorto}></img>
                 <Modal

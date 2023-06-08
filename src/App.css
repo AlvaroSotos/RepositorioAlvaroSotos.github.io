@@ -80,7 +80,7 @@ li{
 img.avatar {
   border-radius: 100%;
   width: 200px;
-  filter: grayscale(100%)
+  filter: grayscale(0%)
 }
 div.skillsContainer{
   display: flex;
