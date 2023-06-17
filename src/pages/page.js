@@ -197,8 +197,11 @@ const Page = () => {
                       implementing algorithms like flocking, creating diferent type of shaders, like a ToonShader, an outline, displacement shader to make sea
                       waves or fishes swim moves and also I used them to make better VFX.
                       I implemented for first time the Unity new Input System, a third person camera (using a virtual camera) that can be locked into enemies, a recursive pool of objects...
-                      Monsters Odyssey has 5 levels, each made by one of the team, I made an underwater adventure where you figth against some enemies made by me but also harvest some key plants to beat the final boss!</p>
-                    <p>Date: January 2022</p>
+                      Monsters Odyssey has 5 levels, each made by one of the team, I made an underwater adventure where you figth against some enemies made by me but also harvest some key plants to beat the final boss!. 
+                       Here are some links where you can see some of the shaders and VFX in action:</p>
+                    <p> <a href="https://youtu.be/BItB2lQJZRM">Tornado VFX</a><a href="https://youtu.be/zH0kw0nh9sg">Tornado Battle VFX</a><a href="https://youtu.be/HjMlDVfnax0">Fish vertex displacement</a>
+                    <a href="https://youtu.be/_brRltwmNUE">Plants vertex displacement</a><a href="https://youtu.be/1Pc9TvsKzcA">Dissolve helmet animation</a></p>
+                    <p>Date: march 2022</p>
                     <p className="service">Service: c# Windows forms</p>
                 </div>
                 </Modal>
