@@ -18,6 +18,11 @@ import Corto from "../Imagenes/WEB.png"
 import PortadaMonsters from "../Imagenes/MonstersOdyssey.png"
 import pokeball from "../Imagenes/HighRender_Pokeballs.png"
 import GraphicInterface from "../Imagenes/GraphicInterface.png"
+import Imageen from "../Imagenes/PortadaImageen.png"
+import MaterialMuro from "../Imagenes/MaterialMuro.png"
+import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
+import Banco from "../Imagenes/Banco.png"
+
 
 import "../App.css"
 const Page = () => {
@@ -40,6 +45,7 @@ const Page = () => {
       const [modalIsOpenCorto, setModalIsOpenCorto] = React.useState(false);
       const [modalIsOpenBulbasaur, setModalIsOpenBulbasaur] = React.useState(false);
       const [modalIsOpenGraphicInterface, setModalIsOpenGraphicInterface] = React.useState(false);
+      const [modalIsOpenImageen, setModalIsOpenImageen] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
       const bulbasaurVideoId = "4ky0rCV_ZOs";
       const GraphicInterfaceVideoId = "aiH3Y2bVk7g";    
@@ -69,6 +75,9 @@ const Page = () => {
       function openModalGraphicInterface(){
         setModalIsOpenGraphicInterface(true)
       }
+      function openModalImageen(){
+        setModalIsOpenImageen(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -79,6 +88,7 @@ const Page = () => {
         setModalIsOpenCorto(false);
         setModalIsOpenBulbasaur(false);
         setModalIsOpenGraphicInterface(false);
+        setModalIsOpenImageen(false);
       }
     
     
@@ -133,6 +143,31 @@ const Page = () => {
                     <a href="https://bitbucket.org/alvarosotos/opentk-graphic-interface/src/master/">Repository link</a>
                     <p>Date: june 2023</p>
                     <p className="service">Service: OpenTK</p>
+                    </div>
+                </Modal>
+
+                
+                
+            </div>
+            <div className="modal">
+                <img title = "EnviromentModeling" src={Imageen} alt="EnviromentModeling" onClick={openModalImageen}></img>
+                <Modal
+                    isOpen={modalIsOpenImageen}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="EnviromentModeling"
+                >
+                    <div className="EnviromentModeling">
+                    <img className="Imageen" src={Imageen} alt="Imageen"></img>
+                    <img className="MaterialMuro" src={MaterialMuro} alt="MaterialMuro"></img>
+                    <img className="CasaNeptuno" src={CasaNeptuno} alt="CasaNeptuno"></img>
+                    <img className="Banco" src={Banco} alt="Banco"></img>
+                    <h3>Realistic Enviroment Modeling</h3>
+                    <p>This are some of the models, textures and materials that I made during my internship at Imageen. All of them are replies of spanish monuments, at the past or in the present:
+                       Alcántara's roman bridge, period homes from Cánovas' square e.t.c. During these months I also learned Substance Designer to make fully editable materials. </p>
+                    <p></p>
+                    <p>Date: june 2023</p>
+                    <p className="service">Service: Blender and Substance Painter/Designer</p>
                     </div>
                 </Modal>
 

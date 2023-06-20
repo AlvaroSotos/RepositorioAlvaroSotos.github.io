@@ -143,7 +143,9 @@ img.enraya,
 img.palos,
 img.pang,
 video.cortoanimacion,
-video.BulbasaurCard{
+video.BulbasaurCard,
+div.Imageen,
+div.MaterialMuro{
     width: 250px;
   }
 div.monsters h3,
@@ -152,7 +154,9 @@ div.enraya h3,
 div.palos h3,
 div.pang h3,
 div.cortoanimacion h3,
-div.BulbasaurCard h3{
+div.BulbasaurCard h3,
+div.Imageen h3,
+div.MaterialMuro h3{
   margin: 1rem;
 }
 div.monsters p,
@@ -161,7 +165,9 @@ div.enraya p,
 div.palos p,
 div.pang p,
 div.cortoanimacion p,
-div.BulbasaurCard p{
+div.BulbasaurCard p,
+div.Imageen p,
+div.MaterialMuro p{
   margin: 1rem;
   text-align: justify;
 }
@@ -171,7 +177,11 @@ div.enraya a,
 div.palos a,
 div.pang a,
 div.cortoanimacion a,
-div.BulbasaurCard a{
+div.BulbasaurCard a,
+div.Imageen a,
+div.MaterialMuro a,
+div.CasaNeptuno a,
+div.Banco a{
   margin: 1rem;
   text-decoration: underline;
 }
@@ -235,11 +245,24 @@ div.modal img, div.modal video{
  img.enraya,
  img.palos,
  img.pang,
+ img.Imageen,
  video.cortoanimacion,
- video.BulbasaurCard{
+ video.BulbasaurCard {
      width: 40rem;
    }
+   
+
  
+ img.CasaNeptuno,
+ img.Banco{
+    width: 20rem
+ }
+ img.Imageen{
+  width: 30rem
+ }
+ img.MaterialMuro{
+  width: 22rem
+ }
  div.contenedorModal{
    display: flex;
    flex-direction: row;
