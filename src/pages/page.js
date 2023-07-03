@@ -22,6 +22,8 @@ import Imageen from "../Imagenes/PortadaImageen.png"
 import MaterialMuro from "../Imagenes/MaterialMuro.png"
 import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
 import Banco from "../Imagenes/Banco.png"
+import ShaderFragment from "../Imagenes/ShaderFragmentos.png"
+
 
 
 import "../App.css"
@@ -46,9 +48,11 @@ const Page = () => {
       const [modalIsOpenBulbasaur, setModalIsOpenBulbasaur] = React.useState(false);
       const [modalIsOpenGraphicInterface, setModalIsOpenGraphicInterface] = React.useState(false);
       const [modalIsOpenImageen, setModalIsOpenImageen] = React.useState(false);
+      const [modalIsOpenShaderFragment, setModalIsOpenShaderFragment] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
       const bulbasaurVideoId = "4ky0rCV_ZOs";
-      const GraphicInterfaceVideoId = "aiH3Y2bVk7g";    
+      const GraphicInterfaceVideoId = "aiH3Y2bVk7g"; 
+      const ShaderFragments = "QdMTsZmNfXQ";
 
     function openModalGame() {
         setModalIsOpenGame(true);
@@ -78,6 +82,9 @@ const Page = () => {
       function openModalImageen(){
         setModalIsOpenImageen(true)
       }
+      function openModalShaderFragment(){
+        setModalIsOpenShaderFragment(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -89,6 +96,8 @@ const Page = () => {
         setModalIsOpenBulbasaur(false);
         setModalIsOpenGraphicInterface(false);
         setModalIsOpenImageen(false);
+        setModalIsOpenShaderFragment(false);
+
       }
     
     
@@ -125,6 +134,27 @@ const Page = () => {
             <div className='contenedorModal'>
 
 {/*copiar*/}
+<div className="modal">
+                <img title = "FragmentShader" src={ShaderFragment} alt="FragmentShader" onClick={openModalShaderFragment}></img>
+                <Modal
+                    isOpen={modalIsOpenShaderFragment}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="FragmentShader"
+                >
+                    <div className="FragmentShader">
+                    <YouTube title = "FragmentShader" className="FragmentShader" videoId={ShaderFragments} alt="Fragment Shader" controls ></YouTube>
+                    <h3>Pivot Baking Fragment Shader</h3>
+                    <p>This shader was made thanks to Cyanilux's tutorial breakdown. It's made by creating a fractured mesh in Blender,
+                       baking the fractured mesh's pivot into UVs and later in Unity, I modify this pivots position and scale. In this case
+                        it is modified by the position of a capsule and I also included some color and emission variation. </p>
+                    <a href="https://youtu.be/QdMTsZmNfXQ">YouTube link</a>
+                    <p></p>
+                    <p>Date: june 2023</p>
+                    <p className="service">Service: Unity3D</p>
+                    </div>
+                </Modal>
+            </div>
 <div className="modal">
                 <img title = "GraphicInterface" src={GraphicInterface} alt="graphicinterface" onClick={openModalGraphicInterface}></img>
                 <Modal
