@@ -111,16 +111,13 @@ const Page = () => {
             <img className='avatar' src={profile} alt="avatar Alvaro Sotos"></img>
             <div>
             <h2>About me </h2><hr></hr>
-            <p>My name is Álvaro Sotos, I'm a 3D artist and videogames programmer student, I'm always looking to learn and improve my skills. I hope you like my proyects.</p>
-            <p>📍Madrid, Spain</p>
-            <ul>
-            <li>
+            <p>My name is Álvaro Sotos, I'm a 3D artist and video games programmer, I'm always looking to learn and improve my skills to become a tech artist. I hope you like my proyects.</p>
+            <p>📍 Madrid, Spain</p>
+            <p><h3>Repositories </h3></p>
             <a href="https://github.com/alvarosotos"><img src={logoGit} alt="logoGithub"/> </a> 
-            </li>
-            <li>
+
             <a href="https://bitbucket.org/alvarosotos/"><img src={logoBitBucket} alt="logoBitbucket"/></a>
-            </li>
-            </ul>
+            <p></p>
             <h3>Skills </h3>
             <div className='skillsContainer'>
             <img src={logoC} alt="logo C"></img>
@@ -166,13 +163,81 @@ const Page = () => {
                     <div className="graphicinterface">
                     <YouTube title = "GraphicInterface" className="graphicinterface" videoId={GraphicInterfaceVideoId} alt="Graphic Interface" controls ></YouTube>
                     <h3>OpenTK Graphic Interface</h3>
-                    <p>This is a my HND final project, I wanted to learn more about graphic programming so I started by creating a 3D space using OpenTK ( an OpenGL wrapper).This is a video showing how I move around the objects in movement that I made.
+                    <p>This is a my HNC final project, I wanted to learn more about graphic programming so I started by creating a 3D space using OpenTK ( an OpenGL wrapper).This is a video showing how I move around the objects in movement that I made.
                        I look forward to keep improving it and learning more and more. </p>
                     <a href="https://youtu.be/aiH3Y2bVk7g">YouTube link</a>
                     <p></p>
                     <a href="https://bitbucket.org/alvarosotos/opentk-graphic-interface/src/master/">Repository link</a>
                     <p>Date: june 2023</p>
                     <p className="service">Service: OpenTK</p>
+                    </div>
+                </Modal>
+
+                
+                
+            </div>
+
+<div className="modal">
+                <img title = "Cortoanimacion" src={Corto} alt="cortoanimacion" onClick={openModalCorto}></img>
+                <Modal
+                    isOpen={modalIsOpenCorto}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="cortoanimacion"
+                >
+                    <div className="cortoanimacion">
+                    <YouTube title = "Cortoanimacion" className="cortoanimacion" videoId={videoId} alt="Corto de animacion" controls ></YouTube>
+                    <h3>Blender animation short</h3>
+                    <p>This is a blender animation short made in Blender with 2 partners, we made all the scenes models, including props, we wanted to give it a cartoon style so we made a toon shader with a fresnel and glossy effects </p>
+                    <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link.</a>
+                    <p>Date: march 2023</p>
+                    <p className="service">Service: Blender</p>
+                    </div>
+                </Modal>
+
+                
+                
+            </div>
+            <div className="modal">
+            <img src={PortadaMonsters} alt="game" onClick={openModalGame}></img>
+                <Modal
+                    isOpen={modalIsOpenGame}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="monsters"
+                >
+                <div className="monsters" onClick={closeModal}>
+                    <img className="monsters" src={game} alt="game"></img>
+                    <h3>MONSTERS ODYSSEY</h3>
+                    <p>We developed as a team in my HND a 3D action RPG named Monsters Odyssey where I was the lead programmer and I've been expanding my knowledge by
+                      implementing algorithms like flocking, creating diferent type of shaders, like a ToonShader, an outline, displacement shader to make sea
+                      waves or fishes swim moves and also I used them to make better VFX.
+                      I implemented for first time the Unity new Input System, a third person camera (using a virtual camera) that can be locked into enemies, a recursive pool of objects...
+                      Monsters Odyssey has 5 levels, each made by one of the team, I made an underwater adventure where you figth against some enemies made by me but also harvest some key plants to beat the final boss!. 
+                       Here are some links where you can see some of the shaders and VFX in action:</p>
+                    <p> <a href="https://github.com/AlvaroSotos/MonstersOdyssey-Scripts"> My scripts at GitHub</a><a href="https://youtu.be/BItB2lQJZRM">Tornado VFX</a><a href="https://youtu.be/zH0kw0nh9sg">Tornado Battle VFX</a><a href="https://youtu.be/HjMlDVfnax0">Fish vertex displacement</a>
+                    <a href="https://youtu.be/_brRltwmNUE">Plants vertex displacement</a><a href="https://youtu.be/1Pc9TvsKzcA">Dissolve helmet animation</a></p>
+                    <p>Date: march 2022</p>
+                    <p className="service">Service: c# Windows forms</p>
+                </div>
+                </Modal>
+                </div>
+            <div className="modal">
+                <img title = "BulbasaurCard" src={pokeball} alt="BulbasaurCard" onClick={openModalBulbasaur}></img>
+                <Modal
+                    isOpen={modalIsOpenBulbasaur}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="BulbasaurCard"
+                >
+                    <div className="BulbasaurCard">
+                    <YouTube2 title = "Bulbasaurcard" className="BulbasaurCard" videoId={bulbasaurVideoId} alt="3D Bulbasaur Card Video" controls ></YouTube2>
+                    <h3>Blender 3D bulbasaur card</h3>
+                    <p>I modeled this 3D card in Blender and rendered it using the compositing tab in Blender to finally get this result.
+                       I wanted to give bulbasaur a cartoon style so I used a toon shader made with nodes and added an outline material too.</p>
+                    <a href="https://youtu.be/4ky0rCV_ZOs">YouTube link.</a>
+                    <p>Date: january 2023</p>
+                    <p className="service">Service: Blender</p>
                     </div>
                 </Modal>
 
@@ -204,73 +269,7 @@ const Page = () => {
                 
                 
             </div>
-<div className="modal">
-                <img title = "Cortoanimacion" src={Corto} alt="cortoanimacion" onClick={openModalCorto}></img>
-                <Modal
-                    isOpen={modalIsOpenCorto}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="cortoanimacion"
-                >
-                    <div className="cortoanimacion">
-                    <YouTube title = "Cortoanimacion" className="cortoanimacion" videoId={videoId} alt="Corto de animacion" controls ></YouTube>
-                    <h3>Blender animation short</h3>
-                    <p>This is a blender animation short made in Blender with 2 partners, we made all the scenes models, including props, we wanted to give it a cartoon style so we made a toon shader with a fresnel and glossy effects </p>
-                    <a href="https://www.youtube.com/watch?v=gsbUS7zGTtA">YouTube link.</a>
-                    <p>Date: march 2023</p>
-                    <p className="service">Service: Blender</p>
-                    </div>
-                </Modal>
-
-                
-                
-            </div>
-            <div className="modal">
-                <img title = "BulbasaurCard" src={pokeball} alt="BulbasaurCard" onClick={openModalBulbasaur}></img>
-                <Modal
-                    isOpen={modalIsOpenBulbasaur}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="BulbasaurCard"
-                >
-                    <div className="BulbasaurCard">
-                    <YouTube2 title = "Bulbasaurcard" className="BulbasaurCard" videoId={bulbasaurVideoId} alt="3D Bulbasaur Card Video" controls ></YouTube2>
-                    <h3>Blender 3D bulbasaur card</h3>
-                    <p>I modeled this 3D card in Blender and rendered it using the compositing tab in Blender to finally get this result.
-                       I wanted to give bulbasaur a cartoon style so I used a toon shader made with nodes and added an outline material too.</p>
-                    <a href="https://youtu.be/4ky0rCV_ZOs">YouTube link.</a>
-                    <p>Date: january 2023</p>
-                    <p className="service">Service: Blender</p>
-                    </div>
-                </Modal>
-
-                
-                
-            </div>
-            <div className="modal">
-            <img src={PortadaMonsters} alt="game" onClick={openModalGame}></img>
-                <Modal
-                    isOpen={modalIsOpenGame}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="monsters"
-                >
-                <div className="monsters" onClick={closeModal}>
-                    <img className="monsters" src={game} alt="game"></img>
-                    <h3>MONSTERS ODYSSEY</h3>
-                    <p>We developed as a team in my HND a 3D action RPG named Monsters Odyssey where I was the lead programmer and I've been expanding my knowledge by
-                      implementing algorithms like flocking, creating diferent type of shaders, like a ToonShader, an outline, displacement shader to make sea
-                      waves or fishes swim moves and also I used them to make better VFX.
-                      I implemented for first time the Unity new Input System, a third person camera (using a virtual camera) that can be locked into enemies, a recursive pool of objects...
-                      Monsters Odyssey has 5 levels, each made by one of the team, I made an underwater adventure where you figth against some enemies made by me but also harvest some key plants to beat the final boss!. 
-                       Here are some links where you can see some of the shaders and VFX in action:</p>
-                    <p> <a href="https://youtu.be/BItB2lQJZRM">Tornado VFX</a><a href="https://youtu.be/zH0kw0nh9sg">Tornado Battle VFX</a><a href="https://youtu.be/HjMlDVfnax0">Fish vertex displacement</a>
-                    <a href="https://youtu.be/_brRltwmNUE">Plants vertex displacement</a><a href="https://youtu.be/1Pc9TvsKzcA">Dissolve helmet animation</a></p>
-                    <p>Date: march 2022</p>
-                    <p className="service">Service: c# Windows forms</p>
-                </div>
-                </Modal>
-                </div>
+            
 {/*copiar*/}
 
                 <div className="modal">
