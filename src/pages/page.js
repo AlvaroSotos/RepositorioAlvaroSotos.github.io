@@ -26,6 +26,8 @@ import HandPaintedNodes from "../Imagenes/HandPaintedNodes.png"
 import PivotBakingGIF from "../Imagenes/PivotBaking.gif"
 import InterfazGIF from "../Imagenes/InterfazGIF.gif"
 import CortonAnimacionGIF from "../Imagenes/CortoAnimacionGIF.gif"
+import AnimacionPokeball from "../Imagenes/AnimacionPokeball.gif"
+
 
 
 
@@ -255,7 +257,7 @@ const Page = () => {
                 </Modal>
                 </div>
             <div className="modal">
-                <img title = "BulbasaurCard" src={pokeball} alt="BulbasaurCard" onClick={openModalBulbasaur}></img>
+                <img title = "BulbasaurCard" src={AnimacionPokeball} alt="BulbasaurCard" onClick={openModalBulbasaur}></img>
                 <Modal
                     isOpen={modalIsOpenBulbasaur}
                     onRequestClose={closeModal}
