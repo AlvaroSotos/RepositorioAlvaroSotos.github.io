@@ -27,6 +27,7 @@ import ShinChanGIF from "../Imagenes/ShinChan.gif"
 import OutlineNodes from "../Imagenes/OutlineNodes.png"
 import HandPaintedNodes from "../Imagenes/HandPaintedNodes.png"
 import PivotBakingGIF from "../Imagenes/PivotBaking.gif"
+import InterfazGIF from "../Imagenes/InterfazGIF.gif"
 
 
 
@@ -187,7 +188,7 @@ const Page = () => {
                 </Modal>
             </div>
 <div className="modal">
-                <img title = "GraphicInterface" src={GraphicInterface} alt="graphicinterface" onClick={openModalGraphicInterface}></img>
+                <img title = "GraphicInterface" src={InterfazGIF} alt="graphicinterface" onClick={openModalGraphicInterface}></img>
                 <Modal
                     isOpen={modalIsOpenGraphicInterface}
                     onRequestClose={closeModal}
