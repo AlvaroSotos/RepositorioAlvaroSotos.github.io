@@ -15,7 +15,6 @@ import Modal from 'react-modal';
 import YouTube from 'react-youtube';
 import YouTube2 from 'react-youtube';
 import PortadaMonsters from "../Imagenes/MonstersOdyssey.png"
-import pokeball from "../Imagenes/HighRender_Pokeballs.png"
 import Imageen from "../Imagenes/PortadaImageen.png"
 import MaterialMuro from "../Imagenes/MaterialMuro.png"
 import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
@@ -27,6 +26,7 @@ import PivotBakingGIF from "../Imagenes/PivotBaking.gif"
 import InterfazGIF from "../Imagenes/InterfazGIF.gif"
 import CortonAnimacionGIF from "../Imagenes/CortoAnimacionGIF.gif"
 import AnimacionPokeball from "../Imagenes/AnimacionPokeball.gif"
+import MonstersOdysseyGIF from "../Imagenes/MonsterOdysseyGIF.gif"
 
 
 
@@ -233,7 +233,7 @@ const Page = () => {
                 
             </div>
             <div className="modal">
-            <img src={PortadaMonsters} alt="game" onClick={openModalGame}></img>
+            <img src={MonstersOdysseyGIF} alt="game" onClick={openModalGame}></img>
                 <Modal
                     isOpen={modalIsOpenGame}
                     onRequestClose={closeModal}
