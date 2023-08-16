@@ -14,21 +14,18 @@ import mail from "../Imagenes/Mailbox-amico.svg"
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
 import YouTube2 from 'react-youtube';
-import Corto from "../Imagenes/WEB.png"
 import PortadaMonsters from "../Imagenes/MonstersOdyssey.png"
 import pokeball from "../Imagenes/HighRender_Pokeballs.png"
-import GraphicInterface from "../Imagenes/GraphicInterface.png"
 import Imageen from "../Imagenes/PortadaImageen.png"
 import MaterialMuro from "../Imagenes/MaterialMuro.png"
 import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
 import Banco from "../Imagenes/Banco.png"
-import ShaderFragment from "../Imagenes/ShaderFragmentos.png"
 import ShinChanGIF from "../Imagenes/ShinChan.gif"
 import OutlineNodes from "../Imagenes/OutlineNodes.png"
 import HandPaintedNodes from "../Imagenes/HandPaintedNodes.png"
 import PivotBakingGIF from "../Imagenes/PivotBaking.gif"
 import InterfazGIF from "../Imagenes/InterfazGIF.gif"
-
+import CortonAnimacionGIF from "../Imagenes/CortoAnimacionGIF.gif"
 
 
 
@@ -213,7 +210,7 @@ const Page = () => {
             </div>
 
 <div className="modal">
-                <img title = "Cortoanimacion" src={Corto} alt="cortoanimacion" onClick={openModalCorto}></img>
+                <img title = "Cortoanimacion" src={CortonAnimacionGIF} alt="cortoanimacion" onClick={openModalCorto}></img>
                 <Modal
                     isOpen={modalIsOpenCorto}
                     onRequestClose={closeModal}
