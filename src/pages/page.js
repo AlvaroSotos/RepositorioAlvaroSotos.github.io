@@ -23,6 +23,13 @@ import MaterialMuro from "../Imagenes/MaterialMuro.png"
 import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
 import Banco from "../Imagenes/Banco.png"
 import ShaderFragment from "../Imagenes/ShaderFragmentos.png"
+import ShinChanGIF from "../Imagenes/ShinChan.gif"
+import OutlineNodes from "../Imagenes/OutlineNodes.png"
+import HandPaintedNodes from "../Imagenes/HandPaintedNodes.png"
+import PivotBakingGIF from "../Imagenes/PivotBaking.gif"
+
+
+
 
 
 
@@ -49,10 +56,12 @@ const Page = () => {
       const [modalIsOpenGraphicInterface, setModalIsOpenGraphicInterface] = React.useState(false);
       const [modalIsOpenImageen, setModalIsOpenImageen] = React.useState(false);
       const [modalIsOpenShaderFragment, setModalIsOpenShaderFragment] = React.useState(false);
+      const [modalIsOpenStylizedShader, setModalIsOpenStylizedShader] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
       const bulbasaurVideoId = "4ky0rCV_ZOs";
       const GraphicInterfaceVideoId = "aiH3Y2bVk7g"; 
       const ShaderFragments = "QdMTsZmNfXQ";
+      const ShinChanVid = "jfomgTPqghQ";
 
     function openModalGame() {
         setModalIsOpenGame(true);
@@ -85,6 +94,9 @@ const Page = () => {
       function openModalShaderFragment(){
         setModalIsOpenShaderFragment(true)
       }
+      function openModalStylizedShader(){
+        setModalIsOpenStylizedShader(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -97,6 +109,7 @@ const Page = () => {
         setModalIsOpenGraphicInterface(false);
         setModalIsOpenImageen(false);
         setModalIsOpenShaderFragment(false);
+        setModalIsOpenStylizedShader(false);
 
       }
     
@@ -111,7 +124,7 @@ const Page = () => {
             <img className='avatar' src={profile} alt="avatar Alvaro Sotos"></img>
             <div>
             <h2>About me </h2><hr></hr>
-            <p>My name is Álvaro Sotos, I'm a 3D artist and video games programmer, I'm always looking to learn and improve my skills to become a tech artist. I hope you like my proyects.</p>
+            <p>My name is Álvaro Sotos, I'm a 3D artist and video games programmer, I'm always looking to learn and improve my skills. I hope you like my proyects.</p>
             <p>📍 Madrid, Spain</p>
             <p><h3>Repositories </h3></p>
             <a href="https://github.com/alvarosotos"><img src={logoGit} alt="logoGithub"/> </a> 
@@ -132,7 +145,28 @@ const Page = () => {
 
 {/*copiar*/}
 <div className="modal">
-                <img title = "FragmentShader" src={ShaderFragment} alt="FragmentShader" onClick={openModalShaderFragment}></img>
+                <img title = "StylizedShader" src={ShinChanGIF} alt="StylizedShader" onClick={openModalStylizedShader}></img>
+                <Modal
+                    isOpen={modalIsOpenStylizedShader}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="StylizedShader"
+                >
+                    <div className="StylizedShader">
+                    <YouTube title = "StylizedShader" className="StylizedShader" videoId={ShinChanVid} alt="Stylized Hand-draw shader" controls ></YouTube>
+                    <h3>Unity Stylized painted shader</h3>
+                    <p>This time I wanted to reply this shader from a tutorial <a href = "https://www.youtube.com/watch?v=TvqNnKKKd8A&list=WL&index=5&t=0s"> (Link here)</a>, but using the URP shader graph
+                     instead of a HDRP surface shader, I made the texture by using a tile generator in Substance Designer. I also implemented an animated outline to achieve a greater hand-drawn effect, it has some drawing mistakes but I believe it gives a good touch anyways. 
+                     Here you can see both shader graphs nodes: </p> 
+                     <p><img title = "StylizedShader" src={OutlineNodes} alt="StylizedShader" width = "872" heigh = "400"></img>
+                     <img title = "HandPaintedNodes" src={HandPaintedNodes} alt="HandPaintedNodes" width = "800" heigh = "400"></img></p>
+                    <p>Date: august 2023</p>
+                    <p className="service">Service: Unity3D, Blender and Substance Designer</p>
+                    </div>
+                </Modal>
+            </div>
+<div className="modal">
+                <img title = "FragmentShader" src={PivotBakingGIF} alt="FragmentShader" onClick={openModalShaderFragment}></img>
                 <Modal
                     isOpen={modalIsOpenShaderFragment}
                     onRequestClose={closeModal}
@@ -209,7 +243,7 @@ const Page = () => {
                 <div className="monsters" onClick={closeModal}>
                     <img className="monsters" src={game} alt="game"></img>
                     <h3>MONSTERS ODYSSEY</h3>
-                    <p>We developed as a team in my HND a 3D action RPG named Monsters Odyssey where I was the lead programmer and I've been expanding my knowledge by
+                    <p>We developed as a team in my HNC a 3D action RPG named Monsters Odyssey where I was the lead programmer and I've been expanding my knowledge by
                       implementing algorithms like flocking, creating diferent type of shaders, like a ToonShader, an outline, displacement shader to make sea
                       waves or fishes swim moves and also I used them to make better VFX.
                       I implemented for first time the Unity new Input System, a third person camera (using a virtual camera) that can be locked into enemies, a recursive pool of objects...

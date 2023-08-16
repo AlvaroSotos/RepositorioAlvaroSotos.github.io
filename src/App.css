@@ -145,7 +145,8 @@ img.pang,
 video.cortoanimacion,
 video.BulbasaurCard,
 div.Imageen,
-div.MaterialMuro{
+div.MaterialMuro,
+div.OutlineNodes{
     width: 250px;
   }
 div.monsters h3,
@@ -156,7 +157,8 @@ div.pang h3,
 div.cortoanimacion h3,
 div.BulbasaurCard h3,
 div.Imageen h3,
-div.MaterialMuro h3{
+div.MaterialMuro h3,
+div.OutlineNodes h3{
   margin: 1rem;
 }
 div.monsters p,
@@ -167,7 +169,8 @@ div.pang p,
 div.cortoanimacion p,
 div.BulbasaurCard p,
 div.Imageen p,
-div.MaterialMuro p{
+div.MaterialMuro p,
+div.OutlineNodes{
   margin: 1rem;
   text-align: justify;
 }
@@ -181,7 +184,8 @@ div.BulbasaurCard a,
 div.Imageen a,
 div.MaterialMuro a,
 div.CasaNeptuno a,
-div.Banco a{
+div.Banco a,
+div.OutlineNodes a{
   margin: 1rem;
   text-decoration: underline;
 }
@@ -247,7 +251,8 @@ div.modal img, div.modal video{
  img.pang,
  img.Imageen,
  video.cortoanimacion,
- video.BulbasaurCard {
+ video.BulbasaurCard,
+ img.OutlineNodes {
      width: 40rem;
    }
    
