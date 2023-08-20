@@ -14,12 +14,11 @@ import mail from "../Imagenes/Mailbox-amico.svg"
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
 import YouTube2 from 'react-youtube';
-import PortadaMonsters from "../Imagenes/MonstersOdyssey.png"
 import Imageen from "../Imagenes/PortadaImageen.png"
 import MaterialMuro from "../Imagenes/MaterialMuro.png"
 import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
 import Banco from "../Imagenes/Banco.png"
-import ShinChanGIF from "../Imagenes/ShinChan.gif"
+import ShinChanGIF from "../Imagenes/ShinChan2.gif"
 import OutlineNodes from "../Imagenes/OutlineNodes.png"
 import HandPaintedNodes from "../Imagenes/HandPaintedNodes.png"
 import PivotBakingGIF from "../Imagenes/PivotBaking.gif"
@@ -61,7 +60,7 @@ const Page = () => {
       const bulbasaurVideoId = "4ky0rCV_ZOs";
       const GraphicInterfaceVideoId = "aiH3Y2bVk7g"; 
       const ShaderFragments = "QdMTsZmNfXQ";
-      const ShinChanVid = "jfomgTPqghQ";
+      const ShinChanVid = "S41dxq-GugY";
 
     function openModalGame() {
         setModalIsOpenGame(true);
