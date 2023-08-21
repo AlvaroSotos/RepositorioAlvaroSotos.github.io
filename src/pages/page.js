@@ -26,6 +26,8 @@ import InterfazGIF from "../Imagenes/InterfazGIF.gif"
 import CortonAnimacionGIF from "../Imagenes/CortoAnimacionGIF.gif"
 import AnimacionPokeball from "../Imagenes/AnimacionPokeball.gif"
 import MonstersOdysseyGIF from "../Imagenes/MonsterOdysseyGIF.gif"
+import LogoShaderToy from "../Imagenes/ShaderToy.png"
+
 
 
 
@@ -126,9 +128,14 @@ const Page = () => {
             <p>My name is Álvaro Sotos, I'm a 3D artist and video games programmer, I'm always looking to learn and improve my skills. I hope you like my proyects.</p>
             <p>📍 Madrid, Spain</p>
             <p><h3>Repositories </h3></p>
-            <a href="https://github.com/alvarosotos"><img src={logoGit} alt="logoGithub"/> </a> 
-
+            <div className='skillsContainer'>
+              
             <a href="https://bitbucket.org/alvarosotos/"><img src={logoBitBucket} alt="logoBitbucket"/></a>
+            <a href="https://www.shadertoy.com/profile/?show=shaders"><img src={LogoShaderToy} alt="logoShaderToy"/></a>
+            <a href="https://github.com/alvarosotos"><img src={logoGit} alt="logoGithub"/> </a>   
+            </div>
+            
+
             <p></p>
             <h3>Skills </h3>
             <div className='skillsContainer'>
