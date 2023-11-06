@@ -14,10 +14,10 @@ import mail from "../Imagenes/Mailbox-amico.svg"
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
 import YouTube2 from 'react-youtube';
-import Imageen from "../Imagenes/PortadaImageen.png"
-import MaterialMuro from "../Imagenes/MaterialMuro.png"
-import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
-import Banco from "../Imagenes/Banco.png"
+//import Imageen from "../Imagenes/PortadaImageen.png"
+//import MaterialMuro from "../Imagenes/MaterialMuro.png"
+//import CasaNeptuno from "../Imagenes/CasaNeptuno.png"
+//import Banco from "../Imagenes/Banco.png"
 import ShinChanGIF from "../Imagenes/ShinChan2.gif"
 import OutlineNodes from "../Imagenes/OutlineNodes.png"
 import HandPaintedNodes from "../Imagenes/HandPaintedNodes.png"
@@ -27,6 +27,7 @@ import CortonAnimacionGIF from "../Imagenes/CortoAnimacionGIF.gif"
 import AnimacionPokeball from "../Imagenes/AnimacionPokeball.gif"
 import MonstersOdysseyGIF from "../Imagenes/MonsterOdysseyGIF.gif"
 import LogoShaderToy from "../Imagenes/ShaderToy.png"
+import ZiggsVFXGIF from "../Imagenes/ZiggsVFX.gif"
 
 
 
@@ -55,14 +56,17 @@ const Page = () => {
       const [modalIsOpenCorto, setModalIsOpenCorto] = React.useState(false);
       const [modalIsOpenBulbasaur, setModalIsOpenBulbasaur] = React.useState(false);
       const [modalIsOpenGraphicInterface, setModalIsOpenGraphicInterface] = React.useState(false);
-      const [modalIsOpenImageen, setModalIsOpenImageen] = React.useState(false);
+      //const [modalIsOpenImageen, setModalIsOpenImageen] = React.useState(false);
       const [modalIsOpenShaderFragment, setModalIsOpenShaderFragment] = React.useState(false);
       const [modalIsOpenStylizedShader, setModalIsOpenStylizedShader] = React.useState(false);
+      const [modalIsOpenZiggsVFX, setModalIsOpenZiggsVFX] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
       const bulbasaurVideoId = "4ky0rCV_ZOs";
       const GraphicInterfaceVideoId = "aiH3Y2bVk7g"; 
       const ShaderFragments = "QdMTsZmNfXQ";
       const ShinChanVid = "S41dxq-GugY";
+      const ZiggsVFXVid = "bcnnzZ9n3Sg";
+
 
     function openModalGame() {
         setModalIsOpenGame(true);
@@ -89,14 +93,17 @@ const Page = () => {
       function openModalGraphicInterface(){
         setModalIsOpenGraphicInterface(true)
       }
-      function openModalImageen(){
-        setModalIsOpenImageen(true)
-      }
+      //function openModalImageen(){
+       // setModalIsOpenImageen(true)
+      //}
       function openModalShaderFragment(){
         setModalIsOpenShaderFragment(true)
       }
       function openModalStylizedShader(){
         setModalIsOpenStylizedShader(true)
+      }
+      function openModalZiggsVFX(){
+        setModalIsOpenZiggsVFX(true)
       }
       
       function closeModal() {
@@ -108,9 +115,10 @@ const Page = () => {
         setModalIsOpenCorto(false);
         setModalIsOpenBulbasaur(false);
         setModalIsOpenGraphicInterface(false);
-        setModalIsOpenImageen(false);
+        //setModalIsOpenImageen(false);
         setModalIsOpenShaderFragment(false);
         setModalIsOpenStylizedShader(false);
+        setModalIsOpenZiggsVFX(false);
 
       }
     
@@ -150,6 +158,25 @@ const Page = () => {
             <div className='contenedorModal'>
 
 {/*copiar*/}
+<div className="modal">
+                <img title = "ZiggsVFX" src={ZiggsVFXGIF} alt="ZiggsVFX" onClick={openModalZiggsVFX}></img>
+                <Modal
+                    isOpen={modalIsOpenZiggsVFX}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="StylizedShader"
+                >
+                    <div className="ZiggsVFX">
+                    <YouTube title = "Ziggs' Q grafitti skin VFX" className="ZiggsVFX" videoId={ZiggsVFXVid} alt="Ziggs' Q grafitti skin VFX" controls ></YouTube>
+                    <h3>Ziggs' Q grafitti skin VFX</h3>
+                    <p>This is a VFX I made wondering how would it be If league of legends champion Ziggs had a Ink/grafitti skin. To know more about how I made every part of the effect, the mesh and the main shader
+                      take a look at the post I did in ArtStation here: <a href = "https://www.artstation.com/artwork/g04Z1Q"> (Breakdown Post)</a> </p>
+                      <p>|</p>
+                    <p>Date: October 2023</p>
+                    <p className="service">Service: Unity3D, Blender and Substance Designer</p>
+                    </div>
+                </Modal>
+            </div>
 <div className="modal">
                 <img title = "StylizedShader" src={ShinChanGIF} alt="StylizedShader" onClick={openModalStylizedShader}></img>
                 <Modal
@@ -284,7 +311,7 @@ const Page = () => {
                 
                 
             </div>
-            <div className="modal">
+            {/*<div className="modal">
                 <img title = "EnviromentModeling" src={Imageen} alt="EnviromentModeling" onClick={openModalImageen}></img>
                 <Modal
                     isOpen={modalIsOpenImageen}
@@ -308,7 +335,7 @@ const Page = () => {
 
                 
                 
-            </div>
+    </div>*/}
             
 {/*copiar*/}
 
