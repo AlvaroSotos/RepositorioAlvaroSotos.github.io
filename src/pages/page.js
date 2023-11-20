@@ -28,6 +28,7 @@ import AnimacionPokeball from "../Imagenes/AnimacionPokeball.gif"
 import MonstersOdysseyGIF from "../Imagenes/MonsterOdysseyGIF.gif"
 import LogoShaderToy from "../Imagenes/ShaderToy.png"
 import ZiggsVFXGIF from "../Imagenes/ZiggsVFX.gif"
+import RocksVFXGIF from "../Imagenes/RocksVFX.gif"
 
 
 
@@ -60,12 +61,14 @@ const Page = () => {
       const [modalIsOpenShaderFragment, setModalIsOpenShaderFragment] = React.useState(false);
       const [modalIsOpenStylizedShader, setModalIsOpenStylizedShader] = React.useState(false);
       const [modalIsOpenZiggsVFX, setModalIsOpenZiggsVFX] = React.useState(false);
+      const [modalIsOpenRocksVFX, setModalIsOpenRocksVFX] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
       const bulbasaurVideoId = "4ky0rCV_ZOs";
       const GraphicInterfaceVideoId = "aiH3Y2bVk7g"; 
       const ShaderFragments = "QdMTsZmNfXQ";
       const ShinChanVid = "S41dxq-GugY";
       const ZiggsVFXVid = "bcnnzZ9n3Sg";
+      const RocksVFXVid = "5Em3_kz3prM";
 
 
     function openModalGame() {
@@ -105,6 +108,9 @@ const Page = () => {
       function openModalZiggsVFX(){
         setModalIsOpenZiggsVFX(true)
       }
+      function openModalRocksVFX(){
+        setModalIsOpenRocksVFX(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -119,6 +125,7 @@ const Page = () => {
         setModalIsOpenShaderFragment(false);
         setModalIsOpenStylizedShader(false);
         setModalIsOpenZiggsVFX(false);
+        setModalIsOpenRocksVFX(false);
 
       }
     
@@ -159,12 +166,32 @@ const Page = () => {
 
 {/*copiar*/}
 <div className="modal">
+                <img title = "ElectricRockVFX" src={RocksVFXGIF} alt="ElectricRockVFX" onClick={openModalRocksVFX}></img>
+                <Modal
+                    isOpen={modalIsOpenRocksVFX}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="StylizedVFX"
+                >
+                    <div className="ElectricRockVFX">
+                    <YouTube title = "Electric Rocks VFX" className="ElectricRockVFX" videoId={RocksVFXVid} alt="ElectricRockVFX" controls ></YouTube>
+                    <h3>Electric Rocks VFX</h3>
+                    <p>This is a VFX I made inspired by Harry Alisavakis fire rocks VFX, if you want to know more about how I made all the parts of the effect (texture, lightning trails...), I have a breakdown 
+                      where I explain it better:
+                       <a href = "https://alvarosotos.artstation.com/projects/1xVZW8"> (Breakdown Post)</a> </p>
+                      <p>|</p>
+                    <p>Date: November 2023</p>
+                    <p className="service">Service: Unity3D, Blender and Substance Designer</p>
+                    </div>
+                </Modal>
+            </div>
+<div className="modal">
                 <img title = "ZiggsVFX" src={ZiggsVFXGIF} alt="ZiggsVFX" onClick={openModalZiggsVFX}></img>
                 <Modal
                     isOpen={modalIsOpenZiggsVFX}
                     onRequestClose={closeModal}
                     style={customStyles}
-                    contentLabel="StylizedShader"
+                    contentLabel="StylizedVFX"
                 >
                     <div className="ZiggsVFX">
                     <YouTube title = "Ziggs' Q grafitti skin VFX" className="ZiggsVFX" videoId={ZiggsVFXVid} alt="Ziggs' Q grafitti skin VFX" controls ></YouTube>
