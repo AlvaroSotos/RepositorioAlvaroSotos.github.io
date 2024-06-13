@@ -29,6 +29,8 @@ import MonstersOdysseyGIF from "../Imagenes/MonsterOdysseyGIF.gif"
 import LogoShaderToy from "../Imagenes/ShaderToy.png"
 import ZiggsVFXGIF from "../Imagenes/ZiggsVFX.gif"
 import RocksVFXGIF from "../Imagenes/RocksVFX.gif"
+import ArgusGIF from "../Imagenes/GIFModelados.gif"
+import ArgusPNG from "../Imagenes/PortadaWeb.png"
 
 
 
@@ -62,6 +64,7 @@ const Page = () => {
       const [modalIsOpenStylizedShader, setModalIsOpenStylizedShader] = React.useState(false);
       const [modalIsOpenZiggsVFX, setModalIsOpenZiggsVFX] = React.useState(false);
       const [modalIsOpenRocksVFX, setModalIsOpenRocksVFX] = React.useState(false);
+      const [modalIsOpenArgusModels, setModalIsOpenArgusModels] = React.useState(false);
       const videoId = "gsbUS7zGTtA";
       const bulbasaurVideoId = "4ky0rCV_ZOs";
       const GraphicInterfaceVideoId = "aiH3Y2bVk7g"; 
@@ -111,6 +114,9 @@ const Page = () => {
       function openModalRocksVFX(){
         setModalIsOpenRocksVFX(true)
       }
+      function openModalArgusModels(){
+        setModalIsOpenArgusModels(true)
+      }
       
       function closeModal() {
         setModalIsOpenGame(false);
@@ -126,6 +132,7 @@ const Page = () => {
         setModalIsOpenStylizedShader(false);
         setModalIsOpenZiggsVFX(false);
         setModalIsOpenRocksVFX(false);
+        setModalIsOpenArgusModels(false);
 
       }
     
@@ -140,7 +147,7 @@ const Page = () => {
             <img className='avatar' src={profile} alt="avatar Alvaro Sotos"></img>
             <div>
             <h2>About me </h2><hr></hr>
-            <p>My name is Álvaro Sotos, I'm a 3D artist and video games programmer, I'm always looking to learn and improve my skills. I hope you like my proyects.</p>
+            <p>My name is Álvaro Sotos, I'm a 3D artist and video games programmer, I'm always looking to learn and improve my skills to become a great technical artist!. I hope you like my proyects.</p>
             <p>📍 Madrid, Spain</p>
             <p><h3>Repositories </h3></p>
             <div className='skillsContainer'>
@@ -166,6 +173,27 @@ const Page = () => {
 
 {/*copiar*/}
 <div className="modal">
+                <img title = "CharacterModeling" src={ArgusGIF} alt="CharacterModeling" onClick={openModalArgusModels}></img>
+                <Modal
+                    isOpen={modalIsOpenArgusModels}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="ArgusModels"
+                >
+                    <div className="CharacterModeling">
+                    <img className="Argus" src={ArgusPNG} alt="ArgusPNG"></img>
+                    <h3>Argus' characters and weapon 3D models</h3>
+                    <p>These are some of the models I've made for "Argus", a game that is being developed rigth now. I modeled them in Blender and Zbrush to texture them later in Substance. I have a breakdown 
+                      where I explain it better:
+                       <a href = "https://www.artstation.com/artwork/vDagVa"> (Breakdown Post)</a> </p>
+                      <p>|</p>
+                    <p>Date: may 2024</p>
+                    <p className="service">Service: Blender, Zbrush and Substance Painter</p>
+                    </div>
+                </Modal>
+            </div>
+
+<div className="modal">
                 <img title = "ElectricRockVFX" src={RocksVFXGIF} alt="ElectricRockVFX" onClick={openModalRocksVFX}></img>
                 <Modal
                     isOpen={modalIsOpenRocksVFX}
@@ -184,6 +212,30 @@ const Page = () => {
                     <p className="service">Service: Unity3D, Blender and Substance Designer</p>
                     </div>
                 </Modal>
+            </div>
+            <div className="modal">
+                <img title = "GraphicInterface" src={InterfazGIF} alt="graphicinterface" onClick={openModalGraphicInterface}></img>
+                <Modal
+                    isOpen={modalIsOpenGraphicInterface}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="graphicinterface"
+                >
+                    <div className="graphicinterface">
+                    <YouTube title = "GraphicInterface" className="graphicinterface" videoId={GraphicInterfaceVideoId} alt="Graphic Interface" controls ></YouTube>
+                    <h3>OpenTK Graphic Interface</h3>
+                    <p>This is a my HNC final project, I wanted to learn more about graphic programming so I started by creating a 3D space using OpenTK ( an OpenGL wrapper).This is a video showing how I move around the objects in movement that I made.
+                       I look forward to keep improving it and learning more and more. </p>
+                    <a href="https://youtu.be/aiH3Y2bVk7g">YouTube link</a>
+                    <p></p>
+                    <a href="https://bitbucket.org/alvarosotos/opentk-graphic-interface/src/master/">Repository link</a>
+                    <p>Date: june 2023</p>
+                    <p className="service">Service: OpenTK</p>
+                    </div>
+                </Modal>
+
+                
+                
             </div>
 <div className="modal">
                 <img title = "ZiggsVFX" src={ZiggsVFXGIF} alt="ZiggsVFX" onClick={openModalZiggsVFX}></img>
@@ -246,30 +298,7 @@ const Page = () => {
                     </div>
                 </Modal>
             </div>
-<div className="modal">
-                <img title = "GraphicInterface" src={InterfazGIF} alt="graphicinterface" onClick={openModalGraphicInterface}></img>
-                <Modal
-                    isOpen={modalIsOpenGraphicInterface}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="graphicinterface"
-                >
-                    <div className="graphicinterface">
-                    <YouTube title = "GraphicInterface" className="graphicinterface" videoId={GraphicInterfaceVideoId} alt="Graphic Interface" controls ></YouTube>
-                    <h3>OpenTK Graphic Interface</h3>
-                    <p>This is a my HNC final project, I wanted to learn more about graphic programming so I started by creating a 3D space using OpenTK ( an OpenGL wrapper).This is a video showing how I move around the objects in movement that I made.
-                       I look forward to keep improving it and learning more and more. </p>
-                    <a href="https://youtu.be/aiH3Y2bVk7g">YouTube link</a>
-                    <p></p>
-                    <a href="https://bitbucket.org/alvarosotos/opentk-graphic-interface/src/master/">Repository link</a>
-                    <p>Date: june 2023</p>
-                    <p className="service">Service: OpenTK</p>
-                    </div>
-                </Modal>
 
-                
-                
-            </div>
 
 <div className="modal">
                 <img title = "Cortoanimacion" src={CortonAnimacionGIF} alt="cortoanimacion" onClick={openModalCorto}></img>
@@ -384,7 +413,7 @@ const Page = () => {
                 </div>
                 </Modal>
                 </div>
-                <div className="modal">
+                {/*<div className="modal">
                 <img src={pang} alt="pang" onClick={openModalPang}></img>
                 <Modal
                     isOpen={modalIsOpenPang}
@@ -437,7 +466,7 @@ const Page = () => {
                     <p className="service">Service: c# console</p>
                     </div>
                 </Modal>      
-            </div>
+  </div>*/}
 
 
             </div>
